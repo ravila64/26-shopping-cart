@@ -1,30 +1,24 @@
 import './Products.css'
 import { AddToCartIcon } from './Icons.jsx'
-import { products } from '../mocks/products.json'
 
-// eslint-disable-next-line react/prop-types
-export function Products() {
+export function Products({ products }) {
+
   return (
     <main className='products'>
       <ul>
-        {/* eslint-disable-next-line react/prop-types */}
-        {products.slice(0,10).map(product => {
+        {products.slice(0,10).map(product => (
           <li key={product.id}>
-            <div>${product.rating} </div>
-            {/* <img
-              src={product.thumbnail}
+            <img
+              src={product.images[3]}
               alt={product.title}
-            /> */}
+            />
             <div>
-              <strong>{product.title}</strong> - ${product.price}
+              <strong>{product.title}</strong>
             </div>
-            <div>
-              <button>
-                <AddToCartIcon />
-              </button>
-            </div>
+            <div><strong>${product.price}</strong></div>
+            <div> <button> <AddToCartIcon /> </button> </div>
           </li>
-        })}
+        ))}
       </ul>
     </main>
   )
