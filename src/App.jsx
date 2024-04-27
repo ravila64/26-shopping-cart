@@ -6,6 +6,7 @@ function App() {
   return (
     <>
     <h1>Shopping cart</h1>
+    <h3>Prueba 3</h3>
     <Products/>
     </>
   )
