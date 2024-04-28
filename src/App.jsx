@@ -4,7 +4,7 @@ import { Products } from './components/Products.jsx'
 import { useState } from 'react'
 
 function App() {
-  const [products] = useState[initialProducts]
+  const [products] = useState(initialProducts)
   const [filters, setFilters] = useState(
     {
       category: 'all',

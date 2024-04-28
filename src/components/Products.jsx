@@ -9,7 +9,7 @@ export function Products({ products }) {
         {products.slice(0,10).map(product => (
           <li key={product.id}>
             <img
-              src={product.images[3]}
+              src={product.images[2]}
               alt={product.title}
             />
             <div>
