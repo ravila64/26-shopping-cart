@@ -1,6 +1,7 @@
 import './Products.css'
 import { AddToCartIcon } from './Icons.jsx'
 
+// eslint-disable-next-line react/prop-types
 export function Products({ products }) {
 
   return (
