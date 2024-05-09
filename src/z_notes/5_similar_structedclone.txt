@@ -1,0 +1,19 @@
+//1. structuredClone
+
+// 2. usando map
+const newState = state.map(item=>{
+    if(item.id===id){
+        return {
+            ...item,
+            quantity: item.quantity+1
+        }
+    }
+    return item
+})
+  
+ // 3. usando el spread operator y slice
+const newState = [
+    ...state.slice(0, productInCartIndex),
+    {...state[productInCartIndex], quantity: state[productInCartIndex].quantity+1},
+    ...state.slice(productInCartIndex+1)
+]

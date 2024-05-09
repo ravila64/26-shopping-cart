@@ -3,21 +3,19 @@ import { createContext, useState } from "react";
 // averiguar tema de singleton => modulo de java¡script
 
 // esto se crea una sola vez
-export const FiltersContext = createContext();  
+export const FiltersContext = createContext();
 // 2.crear el provider, para proveer el contexto
 // este es el que no provee el acceso al contexto
 // eslint-disable-next-line react/prop-types
-
 export function FiltersProvider({ children }) {
   const [filters, setFilters] = useState({
-    category:'all',
-    minPrice:0
+    category: 'all',
+    minPrice: 0
   })
 
   return (
-    <FiltersContext.Provider
-      value={{
-        filters, 
+    <FiltersContext.Provider value={{
+        filters,
         setFilters
       }}
     >

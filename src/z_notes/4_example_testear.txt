@@ -1,0 +1,7 @@
+// TESTEAndo un reducer funciona para añadir ala carrito
+// eslint-disable-next-line no-undef
+expect(
+  reducer([], {type:'ADD_TO_CART', payload:{id:1}})
+).toEqual([{id: 1, quantity: 1}])
+
+//se hizo dentro de cartProvider
