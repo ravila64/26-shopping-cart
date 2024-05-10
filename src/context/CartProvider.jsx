@@ -8,6 +8,7 @@ export const CartContext = createContext()
 // 2. crear provider
 function useCartReducer() {
   const[state, dispatch ] = useReducer(cartReducer, cartInitialState)
+  
   const addToCart = product => dispatch({
     type:'ADD_TO-CART',
     payload: product

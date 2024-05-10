@@ -17,22 +17,25 @@ export function Products({ products }) {
           const isProductInCart = checkProductInCart(product)
           return (
             <li key={product.id}>
-              <img src={product.images[2]} alt={product.title}/>
+              <img src={product.images[2]} alt={product.title} />
               {/* <img src={product.thumbnail} alt={product.title} /> */}
               <div>
                 <strong>{product.title}-${product.price}</strong>
               </div>
-              <div> <button style={{backgroundColor: isProductInCart ? 'red':'#09f'}} onClick={() => {
-                isProductInCart
-                  ? removeFromCart(product)
-                  : addToCart(product)
-              }}>
-                {
-                  isProductInCart
-                    ? <RemoveFromCartIcon />
-                    : <AddToCartIcon />
-                }
-              </button>
+              <div>
+                <button
+                  style={{ backgroundColor: isProductInCart ? 'red' : '#09f' }} onClick={() => {
+                    isProductInCart
+                      ? removeFromCart(product)
+                      : addToCart(product)
+                  }}
+                  >
+                  {
+                    isProductInCart
+                      ? <RemoveFromCartIcon />
+                      : <AddToCartIcon />
+                  }
+                </button>
               </div>
             </li>
           )
