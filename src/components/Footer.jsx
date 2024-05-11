@@ -17,7 +17,7 @@ export function Footer() {
             }*/}
             <h4>Prueba técnica de React ⚛️ － <span>ravila64 en github</span></h4>
             <h5>Shopping Cart con useContext & useReducer</h5>
-            <h5>Gracias a enseñanzas en videos con MIDUDEV</h5>
+            <h5>Gracias a enseñanzas en videos con midudev</h5>
         </footer> 
     )
 }

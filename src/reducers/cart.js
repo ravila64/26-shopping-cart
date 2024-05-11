@@ -63,7 +63,7 @@ const UPDATE_STATE_BY_ACTION = {
 
 [CART_ACTION_TYPES.CLEAR_CART]: ()=>{
   updateLocalStorage([]) 
-  return [] //cartInitialState;
+  return [] //cartInitialState
 }
 }
 

@@ -1,6 +1,6 @@
 //import react from "@vitejs/plugin-react-swc";
 import { createContext, useReducer } from "react"
-import { cartReducer,cartInitialState } from "../reducers/cartReducer.js"
+import { cartReducer,cartInitialState } from "../reducers/cart.js"
 
 // 1. crear contexto
 export const CartContext = createContext()
@@ -10,7 +10,7 @@ function useCartReducer() {
   const[state, dispatch ] = useReducer(cartReducer, cartInitialState)
   
   const addToCart = product => dispatch({
-    type:'ADD_TO-CART',
+    type:'ADD_TO_CART',
     payload: product
   })
 
@@ -29,8 +29,8 @@ function useCartReducer() {
 export function CartProvider ({ children }) {
     const {state, addToCart, removeFromCart, clearCart}= useCartReducer()
     //const [cart, setCart] = useState([])
-    // aqui estaba addToCart
-    // aqui estaba removeFromCart y clearCart, metodos anteriores
+    // aqui estaba addToCart,removeFromCart y clearCart, metodos anteriores
+    // se pasaron a useCartReducer()
     return(
         <CartContext.Provider value={{
             cart: state,
