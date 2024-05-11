@@ -1,7 +1,7 @@
 import './Cart.css'
 import { useId } from "react";
 import { CartIcon, ClearCartIcon } from "./Icons.jsx"
-import { useCart } from '../hooks/useCart.js';
+import { useCart } from '../hooks/useCart.js'
 
 // eslint-disable-next-line react/prop-types
 function CartItem({ thumbnail, price, title, quantity, addToCart }) {
@@ -16,6 +16,7 @@ function CartItem({ thumbnail, price, title, quantity, addToCart }) {
         </li>
     )
 }
+
 export function Cart() {
     const cartCheckboxId = useId();
     const { cart, clearCart, addToCart } = useCart()
@@ -27,13 +28,13 @@ export function Cart() {
             <input id={cartCheckboxId} type='checkbox' hidden />
             <aside className='cart'>
                 <ul>
-                    {cart.map(product => {
+                    {cart.map(product => (
                         <CartItem
                             key={product.id}
                             addToCart={() => addToCart(product)}
                             {...product} 
                         />
-                    })}
+                    ))}
                 </ul>
                 <button onClick={clearCart}>
                     <ClearCartIcon />
