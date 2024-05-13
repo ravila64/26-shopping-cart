@@ -4,7 +4,6 @@ import { cartReducer,cartInitialState } from "../reducers/cart.js"
 
 // 1. crear contexto
 export const CartContext = createContext()
-
 // 2. crear provider
 function useCartReducer() {
   const[state, dispatch ] = useReducer(cartReducer, cartInitialState)
